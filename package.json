@@ -1,0 +1,28 @@
+{
+  "name": "fivem-typescript-boilerplate",
+  "author": "Sribalan",
+  "version": "0.0.0",
+  "license": "",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "watch": "node scripts/build.js --watch",
+    "format": "pnpm biome format --write",
+    "lint": "pnpm biome lint --write"
+  },
+  "devDependencies": {
+    "@citizenfx/client": "latest",
+    "@citizenfx/server": "latest",
+    "@jgoz/esbuild-plugin-typecheck": "^4.0.3",
+    "@overextended/fx-utils": "^0.0.4",
+    "@types/node": "^22.13.9",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@nativewrappers/fivem": "latest",
+    "@overextended/ox_lib": "latest"
+  }
+}
