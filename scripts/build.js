@@ -322,7 +322,7 @@ async function build() {
       await createFxmanifest({
         client_scripts: clientScripts,
         server_scripts: serverScripts,
-        shared_scripts: ["@es_extended/imports.lua"],
+        shared_scripts: config.sharedScripts,
         files: [...config.files, "locales/*.json", ...files],
         dependencies: config.dependencies,
         metadata: {

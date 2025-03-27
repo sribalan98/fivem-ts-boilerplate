@@ -31,7 +31,7 @@ export default {
 
   // Dependencies
   dependencies: [],
-
+  sharedScripts: [],
   // Watch mode
   watch: false,
 
