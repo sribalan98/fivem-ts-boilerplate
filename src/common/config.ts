@@ -1,7 +1,7 @@
-import type StaticConfig from '~/static/config.json';
-import { LoadJsonFile } from 'utils';
+import type StaticConfig from "~/static/config.json";
+import { LoadJsonFile } from "utils";
 
-let config = LoadJsonFile('static/config.json');
+let config = LoadJsonFile("static/config.json");
 
 $BROWSER: {
   config = await config;

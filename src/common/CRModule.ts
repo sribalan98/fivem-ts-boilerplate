@@ -1,7 +1,7 @@
 /// <reference types="@citizenfx/server" />
 /// <reference types="@citizenfx/client" />
 
-type EventCallback = (...args: any[]) => void;
+type EventCallback = (...args: any[]) => void | Promise<void>;
 
 const CRModule = {
   AddEventHandler(event: string, callback: EventCallback) {
@@ -27,8 +27,8 @@ const CRModule = {
     onNet(event, callback);
   },
 
-  Wait(ms: number) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
+  async Wait(ms: number) {
+    await new Promise((resolve) => setTimeout(resolve, ms));
   },
 
   SetTick(callback: EventCallback) {
@@ -43,20 +43,17 @@ const CRModule = {
     return setTimeout(callback, ms);
   },
 
-  CitizenWait(ms: number) {
+  async CitizenWait(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   },
 
   CreateThread(delay: number, callback: EventCallback) {
-    let isWaiting = false;
-    CRModule.SetTick(async () => {
-      if (!isWaiting) {
-        isWaiting = true;
-        await CRModule.CitizenWait(delay);
-        callback();
-        isWaiting = false;
-      }
+    const threadId = setTick(async () => {
+      await Wait(delay);
+      callback();
     });
+
+    return () => clearTick(threadId);
   },
 };
 

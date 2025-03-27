@@ -3,7 +3,7 @@ import Config from "@common/config";
 in config.json
 add locale : "en"
 */
-let currentLocale = Config.locals;
+let currentLocale = Config.Main.locals;
 let translations: Record<
   string,
   any

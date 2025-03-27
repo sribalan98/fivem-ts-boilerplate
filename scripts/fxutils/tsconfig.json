@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "es2022",
+    "target": "esnext",
+    "lib": ["esnext"],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowUnreachableCode": false,
+    "strict": true,
+    "moduleResolution": "node",
+    "types": ["@types/node"],
+    "skipLibCheck": true,
+    "outDir": "./dist/",
+    "declaration": true,
+    "allowJs": true
+  },
+  "include": ["./**/*.ts", "./**/*.js"],
+  "exclude": ["node_modules", "dist"]
+}
