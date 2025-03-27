@@ -12,6 +12,30 @@ A boilerplate for FiveM resource development using TypeScript. This project is b
 
 **PNPM:** Faster and more efficient package management with pnpm.
 
+**Build Configuration:** Flexible build configuration options available in `build.config.js`, allowing customization of build modes, Lua handling, and more.
+
+**Lua File Handling:** Automatic copying and watching of Lua files for changes, ensuring up-to-date resources.
+
+**Dynamic and Hardcoded Builds:** Support for both dynamic and hardcoded builds, providing flexibility in how resources are compiled and managed.
+
+**Utility Functions:** Includes utility functions for file and process management, enhancing script capabilities and automation.
+
+**Build Modes:** Configurable build modes with `hardcode` option for single entry point or separate files.
+
+**Lua Handling:** Option to enable or disable Lua file handling with `buildLua`.
+
+**Web Build Handling:** Control web build processes with `enableWebBuild`.
+
+**UI Page Configuration:** Flexible UI page settings with `uiPage` and `webUIPage`.
+
+**Directory Configuration:** Customizable source, distribution, and web directories with `srcDir`, `distDir`, and `webDir`.
+
+**Entry Points:** Define server and client entry points with `entryPoints`.
+
+**Watch Mode:** Enable or disable watch mode with `watch` for automatic rebuilds.
+
+**Lua Order:** Follow specific Lua file order with `followLuaOrder`.
+
 ### Prerequisites
 
 **Node.js** (v16 or higher recommended)
@@ -77,6 +101,6 @@ This project is based on the original [`fivem-typescript-boilerplate`](https://g
 
 ## License
 
-## This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-#### Feel free to contribute, open issues, or suggest improvements! Happy coding! 🚀
+Feel free to contribute, open issues, or suggest improvements! Happy coding! 🚀
