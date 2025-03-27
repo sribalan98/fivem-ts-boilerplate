@@ -1,4 +1,4 @@
 {
-  "client_scripts": ["client2.lua", "client.lua"],
+  "client_scripts": ["client.lua"],
   "server_scripts": []
 }
